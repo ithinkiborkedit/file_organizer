@@ -73,7 +73,7 @@ for file in files:
     if not file.startswith('.'):
         try:
             shutil.move(f"{path}/{file}", f"{path}/{file_type}")
-        except NameError:
+        except:
             new_name = rename_file(f"{path}/{file}")
             os.rename(f"{path}/{file}", f'{new_name}')
             shutil.move(f"{new_name}", f"{path}/{file_type}")
